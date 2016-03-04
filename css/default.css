@@ -2,25 +2,30 @@ body {
     color: black;
     font-size: 16px;
     margin: 0px auto 0px auto;
-    width: 600px;
+    min-width: 800px;
+}
+
+.container {
+  padding: 20px;
+  width: 65%;
+  height: auto;
 }
 
 div#header {
-    border-bottom: 2px solid black;
     margin-bottom: 30px;
     padding: 12px 0px 12px 0px;
 }
 
 div#logo a {
     color: black;
-    float: left;
+    float: center;
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
 }
 
 div#header #navigation {
-    text-align: right;
+    text-align: center;
 }
 
 div#header #navigation a {
@@ -33,7 +38,6 @@ div#header #navigation a {
 }
 
 div#footer {
-    border-top: solid 2px black;
     color: #555;
     font-size: 12px;
     margin-top: 30px;

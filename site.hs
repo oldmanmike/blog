@@ -7,13 +7,20 @@ import           Hakyll
 --------------------------------------------------------------------------------
 main :: IO ()
 main = hakyll $ do
-    match "images/*" $ do
-        route   idRoute
-        compile copyFileCompiler
 
-    match "css/*" $ do
+    match ("css/*"
+            .||. "bootstrap/css/*"
+            .||. "highlight/styles/*") $ do
         route   idRoute
         compile compressCssCompiler
+
+    match ("js/*"
+            .||. "bootstrap/js/*"
+            .||. "bootstrap/fonts/*"
+            .||. "images/*"
+            .||. "highlight/highlight.pack.js") $ do
+        route   idRoute
+        compile copyFileCompiler
 
     match (fromList ["about.md"]) $ do
         route   $ setExtension "html"

@@ -17,4 +17,4 @@ cabal.sandbox.config
 *.hp
 _cache/
 _site/
-
+tmp/
